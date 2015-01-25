@@ -1,0 +1,22 @@
+#Setting AWS Information
+[aws]
+aws_access_key_id: AWS_ACCESS_KEY
+aws_secret_access_key: AWS_SECRET_ACCESS_KEY
+region_name: REGION_NAME
+
+
+#Example Function Config Entry
+
+#Required Fields
+[FUNCTIONNAME]
+Name: FUNCTIONNAME
+Runtime: RUNTIME ENVIRONMENT(Options: nodejs)
+Role: LAMBDA ROLE NAME (Example: arn:aws:iam::502621330536:role/lambda_exec_role)
+Handler: FUNCTION TO BEGIN EXECUTION ON LAMBDA
+Mode: HOW FUNCTION IS INVOKED (Options: event)
+DirPath: PATH TO FUNCTION CODE
+
+#Optional Fields
+Description: DESCRIPTION OF FUNCTION
+Timeout: HOW LONG LAMBDA SHOULD WAIT BEFORE TERMINATING A FUNCTION
+MemorySize: THE OF MEMORY IN MEGABYTES THAT YOUR LAMBDA FUNCTION IS GIVEN
