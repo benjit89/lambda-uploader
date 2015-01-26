@@ -30,6 +30,11 @@ files = glob.glob("*.js")
 for file in files:
   zf.write(file)
 
+for dirname, subdirs, files in os.walk("node_modules"):
+    zf.write(dirname)
+    for filename in files:
+        zf.write(os.path.join(dirname, filename))
+
 zf.close()
 
 #Setup AWS Session to Lambda
